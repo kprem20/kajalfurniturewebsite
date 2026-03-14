@@ -1,0 +1,12 @@
+packages:
+  "framer-motion": "For premium scroll reveal animations and smooth page transitions"
+  "embla-carousel-react": "For high-quality, touch-friendly image sliders in hero and testimonials"
+  "embla-carousel-autoplay": "For auto-playing sliders"
+
+images: []
+
+notes:
+  - Frontend-only application as requested. No API routes required.
+  - Smooth scrolling implemented via native CSS behavior.
+  - Using framer-motion for scroll reveal animations to give a premium feel.
+  - Using embla-carousel for robust sliders.

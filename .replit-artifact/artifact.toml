@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Kajal Furniture"
+version = "1.0.0"
+id = "artifacts/kajal-furniture"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 22230
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/kajal-furniture run dev"
+
+[services.env]
+PORT = "22230"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/kajal-furniture", "run", "build"]
+publicDir = "artifacts/kajal-furniture/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
